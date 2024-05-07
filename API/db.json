@@ -2,15 +2,15 @@
     "employees": [
       {
         "id": 1,
+        "title": "Kód",
         "name": "VTG",
-        "city": "Szob",
-        "salary": 500
+        "price": 500
       },
       {
         "id": 2,
+        "title": "Rejtély",
         "name": "Anonymos",
-        "city": "Maga a rejtély",
-        "salary": 300
+        "price": 300
       }
     ]
   }

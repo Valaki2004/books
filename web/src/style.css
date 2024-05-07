@@ -1,0 +1,14 @@
+/*
+File: style.css
+Author: VTG
+Copyright: 2024, VTG
+Group: Szoft I/1/N
+Date: 2024-05-07
+Github: https://github.com/Valaki2004
+Licenc: GNU GPL
+*/
+body{
+    background-image: -webkit-linear-gradient(black,white);
+    height: 1000px;
+    color:white;
+}
