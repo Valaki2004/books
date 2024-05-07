@@ -7,69 +7,32 @@ Date: 2024-05-07
 Github: https://github.com/Valaki2004
 Licenc: GNU GPL
 -->
+
 <!DOCTYPE html>
 <html lang="hu">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Könyvek</title>
+    <title>Bookes</title>
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">        
+  </head>
+  <body>
     <div class="container">
-        <h1>Könyvek:</h1>
-        <table class="table table-striped table-dark">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Cím</th>
-                <th>Szerző</th>
-                <th>Ár</th>
-              </tr>
-            </thead>
-            <tbody id="empBody"></tbody>
-          </table>
-          
-  
-            <div class="modal fade" id="operatorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5 tábla"id="exampleModalLabel">Új dolgozó felvétele</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="container">
-                  <div class="modal-body">
-                    <div class="addform">
-                      <div class="input szin">
-                      <label for="id" class="form-label tábla">ID</label>
-                      <input type="text" id="id" class="form-control" readonly>
-                    </div>
-                    <div class="input szin">
-                      <label for="title" class="form-label tábla">Cím</label>
-                      <input type="text" id="title" class="form-control">
-                    </div>
-                    <div class="input szin">
-                      <label for="name" class="form-label tábla">Szerző</label>
-                      <input type="text" id="name" class="form-control">
-                    </div>
-                    <div class="input szin">
-                      <label for="price" class="form-label tábla">Ár</label>
-                      <input type="text" id="price" class="form-control">
-                    </div>
-                  </div>
-                  </div>
-                  
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-backspace-fill"></i>Bezárás</button>
-                    <button type="button" class="btn btn-success"id="addButton"><i class="bi bi-check-lg"></i>Mentés</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-      <script src="bootstrap.js"></script>
-      <script src="main.js"></script>
+      <h1>Könyvek :</h1>
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cím</th>
+            <th>Szerző</th>
+            <th>Ár</th>
+          </tr>
+        </thead>
+        <tbody id="bookBody"></tbody>
+      </table>
     </div>
-</body>
+    <script src="bootstrap.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

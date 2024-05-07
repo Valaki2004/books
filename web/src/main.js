@@ -8,83 +8,36 @@ Github: https://github.com/Valaki2004
 Licenc: GNU GPL
 */
 const doc = {
-    empBody: document.querySelector("#empBody"),
-    addButton: document.querySelector("#addButton"),
-    idInput: document.querySelector("#id"),
-    titleInput: document.querySelector("#title"),
-    nameInput: document.querySelector("#name"),
-    priceInput: document.querySelector("#price")
+    bookBody: document.querySelector("#bookBody"),
 }
 const state = {
-    url: 'http://localhost:8000/employees',
-    name: 'valaki',
-    city: 'valahol',
-    salary: 300,
-    add: true
+    url: 'http://localhost:8000/books',
 }
-doc.addButton.addEventListener('click', () => {
-    getdataFromForm()
-    console.log('jó')
-    createEmployee()
-    deleteModalContent()
-    clearTableContent()
-    getEmployees()
-})
-function startAdding() {
-    deleteModalContent();
-}
-function getdataFromForm(){
+function getDataFromForm() {
     state.title = doc.titleInput.value
     state.name = doc.nameInput.value
-    state.price = doc.priceInputInput.value
+    state.price = doc.priceInput.value
 }
-function createEmployee() {
-    fetch(state.url, {
-        method: 'post',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify( {
-            name: state.title,
-            city: state.name,
-            salary: state.price
-        })
-    })
-}
-function getEmployees() {
+function getBooks() {
     fetch(state.url)
     .then( response => response.json())
     .then(result => {
-        console.log(result)
-        clearTableContent()
-        renderEmployees(result)
+        renderBooks(result)
     })
 }
-function renderEmployees(employeeList) {
-    employeeList.forEach(emp => {
+function renderBooks(bookList) {
+    
+    bookList.forEach(bks => {
         const row = document.createElement('tr')
         row.innerHTML = `
-        <td>${emp.id}</td>
-        <td>${emp.title}</td>
-        <td>${emp.name}</td>
-        <td>${emp.price}</td>
+            <td>${bks.id}</td>
+            <td>${bks.title}</td>
+            <td>${bks.name}</td>
+            <td>${bks.price}</td>
+            <td>
         `
-        doc.empBody.appendChild(row)
-    });    
+        doc.bookBody.appendChild(row)
+    });   
 }
-function deleteModalContent() {
-    doc.idInput = ''
-    doc.titleInput.value = ''
-    doc.nameInput.value = ''
-    doc.priceInput.value = ''
-}
-function clearTableContent(){
-    doc.empBody.textContent= ''
-}
-function StartDelete(id){
-    console.log(id)
-    deleteEmployee(id)
-    getEmployees()
-}
-getEmployees()
+getBooks()
 
