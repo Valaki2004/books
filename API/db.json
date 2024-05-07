@@ -1,0 +1,16 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "name": "VTG",
+        "city": "Szob",
+        "salary": 500
+      },
+      {
+        "id": 2,
+        "name": "Anonymos",
+        "city": "Maga a rejtély",
+        "salary": 300
+      }
+    ]
+  }
